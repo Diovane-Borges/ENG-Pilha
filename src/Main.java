@@ -14,7 +14,7 @@ public class Main {
 
 
     public static void resolverEx1(Scanner sc) {
-        System.out.println("\n=== Exercício 1: Par e Ímpar ===");
+        System.out.println("\nPar e Ímpar ");
 
         PilhaInt pilhaPar = new PilhaInt(10);
         PilhaInt pilhaImpar = new PilhaInt(10);
@@ -28,15 +28,15 @@ public class Main {
                 Integer desempImpar = pilhaImpar.desempilhar();
 
                 if (desempPar == null) {
-                    System.out.println("Erro: Pilha PAR está vazia!");
+                    System.out.println("Pilha par está vazia!");
                 } else {
-                    System.out.println("Desempilhado da pilha PAR: " + desempPar);
+                    System.out.println("Desempilhado da pilha par: " + desempPar);
                 }
 
                 if (desempImpar == null) {
-                    System.out.println("Erro: Pilha ÍMPAR está vazia!");
+                    System.out.println("Pilha ímpar está vazia!");
                 } else {
-                    System.out.println("Desempilhado da pilha ÍMPAR: " + desempImpar);
+                    System.out.println("Desempilhado da pilha ímpar: " + desempImpar);
                 }
             } else if (numero % 2 == 0) {
                 pilhaPar.empilhar(numero);
@@ -45,12 +45,12 @@ public class Main {
             }
         }
 
-        System.out.println("\nDesempilhando todos os elementos da pilha PAR:");
+        System.out.println("\nPilha par desempilhada :");
         while (!pilhaPar.estaVazia()) {
             System.out.println(pilhaPar.desempilhar());
         }
 
-        System.out.println("\nDesempilhando todos os elementos da pilha ÍMPAR:");
+        System.out.println("\nPilha ímpar desempilhada :");
         while (!pilhaImpar.estaVazia()) {
             System.out.println(pilhaImpar.desempilhar());
         }
@@ -58,8 +58,7 @@ public class Main {
 
 
     public static void resolverEx2(Scanner sc) {
-        System.out.println("\n=== Exercício 2: Palíndromo ===");
-        sc.nextLine(); // limpar buffer do nextInt (caso tenha usado antes)
+        System.out.println("\nPalíndromo");
         System.out.print("Digite uma palavra: ");
         String palavra = sc.nextLine();
 
@@ -68,7 +67,7 @@ public class Main {
 
         PilhaInt pilhaChars = new PilhaInt(normalizada.length());
         for (int i = 0; i < normalizada.length(); i++) {
-            pilhaChars.empilhar(normalizada.charAt(i)); // char → int automático
+            pilhaChars.empilhar(normalizada.charAt(i));
         }
 
         StringBuilder invertida = new StringBuilder();
@@ -85,7 +84,7 @@ public class Main {
 
 
     public static void resolverEx3(Scanner sc) {
-        System.out.println("\n=== Exercício 3: Parênteses Balanceados ===");
+        System.out.println("\nParênteses Balanceados");
         System.out.print("Digite uma expressão: ");
         String expressao = sc.nextLine();
 
@@ -112,7 +111,7 @@ public class Main {
         if (balanceado) {
             System.out.println("Expressão balanceada!");
         } else {
-            System.out.println("Expressão NÃO balanceada!");
+            System.out.println("Expressão não balanceada!");
         }
     }
 }
